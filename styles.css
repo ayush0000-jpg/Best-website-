@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.iphone-frame {
+    width: 375px;
+    height: 812px;
+    background-color: #1a1a1a;
+    border-radius: 40px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notch {
+    width: 210px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-frame {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #00ffcc;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.header h3 {
+    color: #00b3b3;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px #00b3b3;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 2px solid #00ffcc;
+    border-radius: 25px;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-section input:focus {
+    border-color: #ff4c4c;
+}
+
+.input-section button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.8);
+    transition: background-color 0.3s ease-in-out;
+    text-shadow: 0 0 10px #fff;
+}
+
+.input-section button:hover {
+    background-color: #ff4c4c;
+}
+
+.telegram-section button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.8);
+    transition: background-color 0.3s ease-in-out;
+    text-shadow: 0 0 10px #fff;
+}
+
+.telegram-section button:hover {
+    background-color: #ff4c4c;
+}
+
+.loading-animation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.multi-neon-ripple {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.multi-neon-ripple div {
+    position: absolute;
+    border: 4px solid transparent;
+    opacity: 1;
+    border-radius: 50%;
+    animation: ripple-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.multi-neon-ripple .ripple-1 {
+    border-color: #00ffcc;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+}
+
+.multi-neon-ripple .ripple-2 {
+    border-color: #ff4c4c;
+    box-shadow: 0 0 10px #ff4c4c, 0 0 20px #ff4c4c, 0 0 30px #ff4c4c;
+    animation-delay: -0.5s;
+}
+
+.multi-neon-ripple .ripple-3 {
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+    animation-delay: -1s;
+}
+
+@keyframes ripple-animation {
+    0% {
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+}
